@@ -1,0 +1,713 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran MPI - Akhlak Kepada Allah SWT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-in-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="h-full bg-slate-50 text-slate-800 flex flex-col">
+
+    <header class="bg-emerald-700 text-white shadow-md py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-emerald-600 p-2 rounded-xl border border-emerald-500 shadow-inner">
+                    <svg class="w-6 h-6 text-emerald-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg md:text-xl tracking-tight">BAB III: Akhlak Kepada Allah SWT</h1>
+                    <p class="text-xs text-emerald-200">Model Pembelajaran Interaktif (MPI) - Diperbarui & Lengkap</p>
+                </div>
+            </div>
+            <div class="hidden sm:flex items-center space-x-2 text-xs bg-emerald-800 px-3 py-1.5 rounded-full border border-emerald-600">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Mode Belajar Aktif</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-5xl w-full mx-auto p-4 md:p-6 flex flex-col gap-6">
+
+        <!-- Progress Steps Bar -->
+        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 grid grid-cols-5 gap-2 text-center text-xs font-semibold">
+            <button onclick="switchTab(0)" id="tab-btn-0" class="step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-emerald-600 text-white shadow-sm">1. Pendahuluan</button>
+            <button onclick="switchTab(1)" id="tab-btn-1" class="step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-slate-100 text-slate-600 hover:bg-slate-200">2. Eksplorasi</button>
+            <button onclick="switchTab(2)" id="tab-btn-2" class="step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-slate-100 text-slate-600 hover:bg-slate-200">3. Materi</button>
+            <button onclick="switchTab(3)" id="tab-btn-3" class="step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-slate-100 text-slate-600 hover:bg-slate-200">4. Evaluasi</button>
+            <button onclick="switchTab(4)" id="tab-btn-4" class="step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-slate-100 text-slate-600 hover:bg-slate-200">5. Refleksi</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 flex-1 flex flex-col justify-between">
+            
+            <!-- TAB 0: PENDAHULUAN & TUJUAN -->
+            <div id="tab-content-0" class="tab-content fade-in space-y-6">
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 rounded-2xl p-6">
+                    <span class="bg-emerald-200 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fase 1: Orientasi & Tujuan</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Selamat Datang di Pembelajaran Interaktif</h2>
+                    <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+                        Akhlak kepada Allah Swt. adalah fondasi utama dalam kehidupan seorang Muslim. Melalui bab ini, kita akan menyelami bagaimana cara bersikap yang benar kepada Sang Pencipta, khususnya melalui pemahaman mendalam, amalan doa, dan tawakal yang utuh.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-bold text-slate-800 text-lg flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Tujuan Pembelajaran Bab Ini:
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 hover:border-emerald-300 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center mb-3">1</div>
+                            <h4 class="font-bold text-slate-900">Menjelaskan Pengertian</h4>
+                            <p class="text-slate-600 text-sm mt-1">Memahami konsep dasar akhlak kepada Allah Swt., hakikat penciptaan, serta implementasinya dalam keseharian.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 hover:border-emerald-300 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center mb-3">2</div>
+                            <h4 class="font-bold text-slate-900">Menerapkan Doa & Tawakal</h4>
+                            <p class="text-slate-600 text-sm mt-1">Mengaplikasikan perilaku berdoa sebagai bentuk kebutuhan hamba dan tawakal sebagai wujud penyerahan diri secara total setelah ikhtiar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 1: EKSPLORASI / APERSEPSI -->
+            <div id="tab-content-1" class="tab-content hidden fade-in space-y-6">
+                <div>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fase 2: Eksplorasi Masalah</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Studi Kasus & Refleksi Awal</h2>
+                    <p class="text-slate-600 text-sm mt-1">Bacalah ilustrasi berikut dan pilih respons yang mencerminkan akhlak terbaik kepada Allah Swt.</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="bg-slate-200 text-slate-700 font-bold px-2.5 py-1 rounded-lg text-xs">Kasus</span>
+                        <p class="text-slate-700 font-medium text-sm md:text-base leading-relaxed">
+                            Ahmad sedang menghadapi ujian sekolah yang sangat sulit. Ia sudah belajar dengan giat, namun perasaannya masih diliputi kecemasan besar. Apa tindakan yang paling tepat mencerminkan akhlak kepada Allah?
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 pt-2" id="exploration-options">
+                        <button onclick="selectExplorationOption(0)" class="exp-opt w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 transition-all text-sm font-medium text-slate-700">
+                            A. Hanya pasrah saja tanpa berdoa karena menganggap Allah sudah tahu isinya.
+                        </button>
+                        <button onclick="selectExplorationOption(1)" class="exp-opt w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 transition-all text-sm font-medium text-slate-700">
+                            B. Berdoa dengan khusyuk memohon kemudahan, lalu bertawakal (menyerahkan hasil terbaik) kepada Allah Swt.
+                        </button>
+                        <button onclick="selectExplorationOption(2)" class="exp-opt w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 transition-all text-sm font-medium text-slate-700">
+                            C. Mengandalkan usaha belajar keras semata tanpa melibatkan Allah di dalam hatinya.
+                        </button>
+                    </div>
+
+                    <div id="exploration-feedback" class="hidden p-4 rounded-xl text-sm font-medium mt-3"></div>
+                </div>
+            </div>
+
+            <!-- TAB 2: MATERI INTI (DIPERLUAS & LENGKAP) -->
+            <div id="tab-content-2" class="tab-content hidden fade-in space-y-6">
+                <div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fase 3: Penyajian Materi MPI (Kajian Mendalam)</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Materi Lengkap: Akhlak Kepada Allah Swt.</h2>
+                    <p class="text-slate-600 text-sm mt-1">Pilih topik materi di bawah ini untuk mempelajari penjelasan rinci beserta contoh nyata dalam kehidupan sehari-hari.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <button onclick="showMaterialDetail('pengertian')" id="mat-btn-pengertian" class="material-card bg-emerald-50 border-2 border-emerald-500 rounded-2xl p-5 text-left transition-all shadow-sm">
+                        <h4 class="font-bold text-emerald-900 text-base">1. Pengertian & Hakikat</h4>
+                        <p class="text-xs text-emerald-700 mt-1">Definisi, dasar hukum, dan pilar-pilar akhlak kepada Allah.</p>
+                    </button>
+                    <button onclick="showMaterialDetail('doa')" id="mat-btn-doa" class="material-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-left transition-all hover:border-emerald-300">
+                        <h4 class="font-bold text-slate-900 text-base">2. Doa (Senjata Mukmin)</h4>
+                        <p class="text-xs text-slate-600 mt-1">Adab, keutamaan, dan contoh aplikasi doa harian.</p>
+                    </button>
+                    <button onclick="showMaterialDetail('tawakal')" id="mat-btn-tawakal" class="material-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-left transition-all hover:border-emerald-300">
+                        <h4 class="font-bold text-slate-900 text-base">3. Tawakal & Ikhtiar</h4>
+                        <p class="text-xs text-slate-600 mt-1">Sinergi usaha maksimal dan penyerahan mutlak.</p>
+                    </button>
+                </div>
+
+                <div id="material-display" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all space-y-4">
+                    <!-- Dinamis Diisi oleh JS -->
+                </div>
+            </div>
+
+            <!-- TAB 3: EVALUASI / Kuis (20 Soal) -->
+            <div id="tab-content-3" class="tab-content hidden fade-in space-y-6">
+                <div>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fase 4: Evaluasi Pembelajaran (20 Soal)</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Uji Pemahaman Komprehensif</h2>
+                    <p class="text-slate-600 text-sm mt-1">Jawablah 20 pertanyaan berikut dari tingkat Mudah, Sedang, hingga Sulit untuk menguji penguasaan materi.</p>
+                </div>
+
+                <div id="quiz-container" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+                    <div class="flex justify-between items-center text-xs font-bold text-slate-500">
+                        <div class="flex items-center gap-2">
+                            <span id="quiz-counter">Pertanyaan 1 dari 20</span>
+                            <span id="quiz-difficulty-badge" class="px-2 py-0.5 rounded text-[10px] uppercase font-bold bg-emerald-100 text-emerald-800">Mudah</span>
+                        </div>
+                        <span id="quiz-score-indicator">Skor: 0</span>
+                    </div>
+
+                    <div id="quiz-question-box" class="space-y-4">
+                        <h3 id="quiz-question" class="font-bold text-slate-900 text-base md:text-lg"></h3>
+                        <div id="quiz-options" class="grid gap-3"></div>
+                    </div>
+
+                    <div id="quiz-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                </div>
+
+                <div id="quiz-result-box" class="hidden text-center py-8 space-y-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">🎉</div>
+                    <h3 class="text-2xl font-bold text-slate-900">Kuis Selesai!</h3>
+                    <p id="quiz-final-score" class="text-slate-600 font-medium"></p>
+                    <button onclick="resetQuiz()" class="px-6 py-3 bg-emerald-600 text-white font-bold text-sm rounded-xl hover:bg-emerald-700 transition-all shadow-sm">Ulangi Kuis</button>
+                </div>
+            </div>
+
+            <!-- TAB 4: REFLEKSI -->
+            <div id="tab-content-4" class="tab-content hidden fade-in space-y-6">
+                <div>
+                    <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fase 5: Refleksi & Penutup</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-3">Refleksi Diri Harian</h2>
+                    <p class="text-slate-600 text-sm mt-1">Tuliskan komitmen atau tekad Anda dalam menerapkan akhlak kepada Allah Swt melalui doa dan tawakal.</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+                    <label for="reflection-input" class="block text-sm font-bold text-slate-700">Komitmen Saya Hari Ini:</label>
+                    <textarea id="reflection-input" rows="4" class="w-full p-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm text-slate-700 bg-white outline-none transition-all" placeholder="Contoh: Saya bertekad untuk selalu berdoa sebelum memulai aktivitas dan bertawakal penuh kepada Allah atas hasil usaha saya..."></textarea>
+                    
+                    <button onclick="saveReflection()" class="w-full py-3 bg-emerald-600 text-white font-bold text-sm rounded-xl hover:bg-emerald-700 transition-all shadow-sm">Simpan Komitmen</button>
+                    
+                    <div id="reflection-success" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium text-center">
+                        Alhamdulillah! Komitmen Anda berhasil disimpan. Semoga istiqamah dalam mengamalkannya.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons Bottom -->
+            <div class="flex justify-between items-center pt-6 mt-6 border-t border-slate-100">
+                <button onclick="navigateTab(-1)" id="prev-btn" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-sm font-semibold hover:bg-slate-100 transition-all disabled:opacity-40 disabled:cursor-not-allowed">Sebelumnya</button>
+                <button onclick="navigateTab(1)" id="next-btn" class="px-6 py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-all shadow-sm">Selanjutnya</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let currentTab = 0;
+        const totalTabs = 5;
+
+        // Data Materi Diperluas beserta Contoh Nyata
+        const materialContentData = {
+            pengertian: {
+                title: "1. Pengertian & Hakikat Akhlak Kepada Allah Swt.",
+                content: `
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        <strong>Akhlak kepada Allah Swt.</strong> adalah sikap batin dan perbuatan nyata yang wajib dilakukan oleh seorang hamba sebagai wujud pengagungan, kepatuhan, rasa syukur, serta kecintaan yang mendalam kepada Sang Pencipta (Al-Khaliq). Hal ini didasari kesadaran mutlak bahwa Allah-lah yang menciptakan, memelihara, dan melimpahkan nikmat tiada tara kepada manusia.
+                    </p>
+                    <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2 mt-3">
+                        <h4 class="font-bold text-slate-900 text-sm">Pilar-Pilar Utama Akhlak Kepada Allah:</h4>
+                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-1">
+                            <li><strong>Mahabbah (Cinta):</strong> Mencintai Allah di atas segalanya dengan menjalankan perintah dan menjauhi larangan-Nya.</li>
+                            <li><strong>Khauf & Raja':</strong> Perasaan takut akan kemurkaan-Nya diimbangi dengan harapan penuh atas rahmat dan ampunan-Nya.</li>
+                            <li><strong>Muraqabah:</strong> Kesadaran bahwa Allah senantiasa mengawasi gerak-gerik lahir maupun batin kita di mana pun berada.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-3">
+                        <h4 class="font-bold text-emerald-900 text-sm mb-1">🌟 Contoh Nyata dalam Kehidupan Sehari-hari:</h4>
+                        <p class="text-xs text-emerald-800 leading-relaxed">
+                            Ketika menemukan uang jatuh di jalan, seorang anak yang berakhlak kepada Allah segera menyerahkannya kepada yang berhak atau pihak berwajib, karena ia sadar Allah Maha Melihat dan melarang mengambil hak orang lain (amanah).
+                        </p>
+                    </div>
+                `
+            },
+            doa: {
+                title: "2. Menerapkan Akhlak Melalui Doa",
+                content: `
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        <strong>Doa</strong> adalah permohonan tulus seorang hamba kepada Rabb-nya. Doa merupakan inti ibadah sekaligus cerminan paling murni dari akhlak hamba kepada Allah, karena doa menunjukkan pengakuan atas kelemahan diri dan kebutuhan mutlak kepada Sang Pencipta.
+                    </p>
+                    <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2 mt-3">
+                        <h4 class="font-bold text-slate-900 text-sm">Adab & Etika Berdoa:</h4>
+                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-1">
+                            <li>Memulai doa dengan memuji Allah (Hamdalah) dan membaca shalawat Nabi Muhammad SAW.</li>
+                            <li>Berdoa dengan suara lembut, penuh khusyuk, dan harapan dikabulkan.</li>
+                            <li>Menghadap kiblat, mengangkat kedua tangan, dan yakin bahwa Allah Maha Mendengar.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-3">
+                        <h4 class="font-bold text-emerald-900 text-sm mb-1">🌟 Contoh Nyata dalam Kehidupan Sehari-hari:</h4>
+                        <p class="text-xs text-emerald-800 leading-relaxed">
+                            Fatimah selalu melazimkan membaca doa sebelum belajar, ketika keluar rumah, dan memohon kemudahan kepada Allah setiap kali menghadapi kesulitan ujian sekolah, tanpa pernah merasa sombong dengan kepintarannya.
+                        </p>
+                    </div>
+                `
+            },
+            tawakal: {
+                title: "3. Menerapkan Akhlak Melalui Tawakal & Ikhtiar",
+                content: `
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        <strong>Tawakal</strong> adalah menyandarkan hati kepada Allah Swt. secara total setelah mengerahkan segala daya upaya (ikhtiar) secara maksimal. Tawakal bukanlah sikap malas atau pasrah tanpa usaha, melainkan ketenangan batin ketika hasil akhir diserahkan kepada Zat Yang Maha Mengetahui yang terbaik.
+                    </p>
+                    <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2 mt-3">
+                        <h4 class="font-bold text-slate-900 text-sm">Sinergi Ikhtiar dan Tawakal:</h4>
+                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-1">
+                            <li><strong>Ikhtiar:</strong> Belajar giat, bekerja keras, menjaga kesehatan, dan merencanakan sesuatu secara bijak.</li>
+                            <li><strong>Tawakal:</strong> Menerima hasil akhir dengan lapang dada (ridha), bersyukur jika berhasil, atau bersabar jika belum berhasil.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mt-3">
+                        <h4 class="font-bold text-emerald-900 text-sm mb-1">🌟 Contoh Nyata dalam Kehidupan Sehari-hari:</h4>
+                        <p class="text-xs text-emerald-800 leading-relaxed">
+                            Pak Tani menggarap sawahnya dengan mencangkul, memberi pupuk, dan mengairi tanaman dengan rajin (ikhtiar). Setelah itu, ia berdoa dan menyerahkan hasilnya kepada Allah (tawakal) apabila nanti terkena hujan atau hama.
+                        </p>
+                    </div>
+                `
+            }
+        };
+
+        function showMaterialDetail(type) {
+            const displayEl = document.getElementById('material-display');
+            displayEl.innerHTML = materialContentData[type].content;
+
+            // Update button styles
+            ['pengertian', 'doa', 'tawakal'].forEach(t => {
+                const btn = document.getElementById(`mat-btn-${t}`);
+                if (t === type) {
+                    btn.className = "material-card bg-emerald-50 border-2 border-emerald-500 rounded-2xl p-5 text-left transition-all shadow-sm";
+                } else {
+                    btn.className = "material-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 text-left transition-all hover:border-emerald-300";
+                }
+            });
+        }
+
+        // Quiz data (20 Soal: Mudah, Sedang, Sulit)
+        const quizData = [
+            // LEVEL MUDAH (1 - 7)
+            {
+                level: "Mudah",
+                question: "Apa arti mendasar dari akhlak kepada Allah Swt.?",
+                options: [
+                    "Sikap acuh tak acuh terhadap perintah agama",
+                    "Sikap dan perbuatan hamba sebagai bentuk pengagungan, kepatuhan, dan kecintaan kepada Allah Swt.",
+                    "Beribadah hanya ketika sedang menghadapi masalah besar",
+                    "Meminta bantuan kepada selain Allah dalam setiap urusan"
+                ],
+                correct: 1,
+                explanation: "Benar! Akhlak kepada Allah adalah wujud pengagungan, kepatuhan, rasa syukur, dan cinta kepada Sang Pencipta."
+            },
+            {
+                level: "Mudah",
+                question: "Mengapa doa disebut sebagai bentuk akhlak mulia kepada Allah?",
+                options: [
+                    "Karena doa bisa membuat keinginan duniawi langsung terkabul tanpa usaha",
+                    "Karena doa adalah pengakuan penuh akan kelemahan diri dan ketergantungan mutlak kepada Allah Swt.",
+                    "Karena doa hanya diucapkan ketika shalat fardhu saja",
+                    "Karena doa tidak memerlukan keyakinan yang kuat"
+                ],
+                correct: 1,
+                explanation: "Tepat! Doa mencerminkan ketundukan total dan kesadaran bahwa manusia sangat bergantung kepada Allah."
+            },
+            {
+                level: "Mudah",
+                question: "Manakah penerapan tawakal yang benar dalam kehidupan sehari-hari?",
+                options: [
+                    "Berpasrah diri tanpa pernah mau belajar atau bekerja keras",
+                    "Bekerja dan berusaha semaksimal mungkin (ikhtiar), lalu menyerahkan segala keputusan akhir kepada Allah Swt.",
+                    "Menyerahkan nasib sepenuhnya kepada ramalan atau usaha orang lain",
+                    "Berdoa agar sukses tanpa perlu melakukan usaha apa pun"
+                ],
+                correct: 1,
+                explanation: "Sangat tepat! Tawakal yang benar selalu didahului dengan ikhtiar (usaha maksimal) yang sungguh-sungguh."
+            },
+            {
+                level: "Mudah",
+                question: "Sikap seorang hamba yang selalu merasa diawasi oleh Allah Swt. dalam setiap perbuatannya dinamakan...",
+                options: [
+                    "Riya'",
+                    "Ujub",
+                    "Ihsan / Muraqabah",
+                    "Takabur"
+                ],
+                correct: 2,
+                explanation: "Benar! Merasa diawasi oleh Allah melahirkan sikap ihsan dan kesadaran berakhlak."
+            },
+            {
+                level: "Mudah",
+                question: "Lawan dari akhlak yang baik kepada Allah Swt. adalah...",
+                options: [
+                    "Syukur nikmat",
+                    "Durhaka / maksiat kepada perintah Allah",
+                    "Tawakal yang benar",
+                    "Sabar dalam ketaatan"
+                ],
+                correct: 1,
+                explanation: "Tepat! Durhaka atau melanggar perintah-Nya adalah bentuk buruknya akhlak kepada Allah."
+            },
+            {
+                level: "Mudah",
+                question: "Perintah untuk berdoa kepada Allah termaktub dalam Al-Quran surah...",
+                options: [
+                    "Al-Baqarah ayat 45",
+                    "Ghafir (Al-Mu'min) ayat 60",
+                    "An-Nisa ayat 1",
+                    "Al-Ikhlas ayat 1"
+                ],
+                correct: 1,
+                explanation: "Benar! Allah berfirman 'Ud'uni astajib lakum' (Berdoalah kepada-Ku, niscaya akan Kuperkenankan bagimu) dalam QS. Ghafir: 60."
+            },
+            {
+                level: "Mudah",
+                question: "Sikap menerima segala ketentuan Allah Swt. dengan lapang dada setelah berusaha disebut...",
+                options: [
+                    "Qana'ah / Ridha",
+                    "Putus asa",
+                    "Iri hati",
+                    "Sombong"
+                ],
+                correct: 0,
+                explanation: "Tepat! Ridha dan qana'ah mencerminkan keindahan akhlak hamba kepada ketetapan Sang Pencipta."
+            },
+
+            // LEVEL SEDANG (8 - 14)
+            {
+                level: "Sedang",
+                question: "Bagaimanakah hubungan antara ikhtiar dan tawakal yang ideal menurut ajaran Islam?",
+                options: [
+                    "Tawakal didahulukan baru kemudian ikhtiar seadanya",
+                    "Ikhtiar dilakukan secara maksimal terlebih dahulu, baru kemudian bertawakal kepada Allah",
+                    "Ikhtiar dan tawakal tidak saling berhubungan sama sekali",
+                    "Cukup bertawakal tanpa perlu ikhtiar karena takdir sudah ditentukan"
+                ],
+                correct: 1,
+                explanation: "Benar! Ikhtiar adalah bentuk pelaksanaan kewajiban berusaha, sedangkan tawakal adalah penyerahan hasil akhirnya kepada Allah."
+            },
+            {
+                level: "Sedang",
+                question: "Ketika doa seorang hamba belum dikabulkan dalam bentuk yang ia inginkan, sikap akhlak yang benar adalah...",
+                options: [
+                    "Marah kepada Allah dan berhenti berdoa",
+                    "Berprasangka buruk kepada takdir-Nya",
+                    "Tetap berhusnuzdan (berprasangka baik), menyadari bahwa Allah memberikan yang terbaik menurut ilmu-Nya",
+                    "Meninggalkan ibadah wajib karena merasa kecewa"
+                ],
+                correct: 2,
+                explanation: "Tepat! Husnuzdan kepada Allah adalah bukti kematangan akhlak seorang mukmin dalam menghadapi qada dan qadar."
+            },
+            {
+                level: "Sedang",
+                question: "Apa makna yang terkandung dalam kalimat 'La hawla wala quwwata illa billah' berkaitan dengan tawakal?",
+                options: [
+                    "Manusia memiliki kekuatan mandiri yang mutlak",
+                    "Tiada daya dan upaya serta kekuatan kecuali dengan pertolongan Allah Swt.",
+                    "Manusia bisa menentukan takdirnya sendiri tanpa bantuan Tuhan",
+                    "Pernyataan pasrah total tanpa ada unsur keyakinan"
+                ],
+                correct: 1,
+                explanation: "Benar! Kalimat ini adalah inti dari tawakal, yakni mengakui bahwa segala daya upaya mutlak berasal dari Allah."
+            },
+            {
+                level: "Sedang",
+                question: "Manakah di bawah ini yang merupakan cerminan nyata dari rasa syukur (bentuk akhlak kepada Allah)?",
+                options: [
+                    "Menggunakan nikmat harta dan kesehatan untuk hal-hal yang dilarang",
+                    "Mengingkari bahwa nikmat tersebut berasal dari Allah Swt.",
+                    "Memanfaatkan nikmat karunia Allah untuk ketaatan dan berbagi kepada sesama",
+                    "Menyimpan nikmat rapat-rapat tanpa mau memanfaatkannya"
+                ],
+                correct: 2,
+                explanation: "Tepat! Syukur diwujudkan dengan lisan, hati, dan amal perbuatan dalam ketaatan kepada Allah."
+            },
+            {
+                level: "Sedang",
+                question: "Mengapa orang yang bertawakal dengan benar kepada Allah akan terhindar dari sifat stres atau putus asa?",
+                options: [
+                    "Karena ia tahu dunia ini tidak memiliki aturan",
+                    "Karena ia menyerahkan beban hasil akhir kepada zat yang Maha Kuasa setelah usahanya maksimal",
+                    "Karena ia tidak pernah mau bekerja keras sama sekali",
+                    "Karena ia mengandalkan kekuatan manusia lain"
+                ],
+                correct: 1,
+                explanation: "Benar! Tawakal memberikan ketenangan jiwa (sakinah) karena beban hasil akhir berada di tangan Allah."
+            },
+            {
+                level: "Sedang",
+                question: "Dalam adab berdoa, seorang Muslim dianjurkan untuk memulai dengan...",
+                options: [
+                    "Langsung meminta apa saja tanpa aturan",
+                    "Memuji Allah (Hamdalah) dan bershalawat kepada Nabi Muhammad SAW",
+                    "Meminta dengan nada memaksa kepada Allah",
+                    "Berdoa sambil mengeluh atas kesulitan hidup"
+                ],
+                correct: 1,
+                explanation: "Tepat! Adab berdoa yang mulia diawali dengan memuji Allah dan membaca shalawat Nabi."
+            },
+            {
+                level: "Sedang",
+                question: "Bagaimana cara menilai apakah seseorang memiliki akhlak yang baik kepada Allah dalam hal ibadah?",
+                options: [
+                    "Melakukan ibadah hanya ketika dilihat oleh orang banyak (riya')",
+                    "Beribadah dengan ikhlas semata-mata mencari ridha Allah Swt., baik dalam keadaan sepi maupun ramai",
+                    "Beribadah sekadar menggugurkan kewajiban sosial",
+                    "Melakukan ibadah dengan terpaksa dan mengeluh"
+                ],
+                correct: 1,
+                explanation: "Benar! Keikhlasan adalah tolok utama diterimanya akhlak dan ibadah kepada Allah Swt."
+            },
+
+            // LEVEL SULIT (15 - 20)
+            {
+                level: "Sulit",
+                question: "Terkait konsep ikhtiar dan tawakal, kisah Nabi Ibrahim AS saat dilemparkan ke dalam api yang dingin dan selamat merupakan manifestasi tingkat tinggi dari...",
+                options: [
+                    "Kecerdasan akal manusia semata",
+                    "Tawakal paripurna yang dilandasi keyakinan mutlak (haqqul yaqin) kepada pertolongan Allah",
+                    "Ketergantungan kepada bala bantuan manusia",
+                    "Pasrah tanpa rencana strategis"
+                ],
+                correct: 1,
+                explanation: "Luar biasa! Kisah Nabi Ibrahim AS adalah puncak contoh tawakal sejati saat menghadapi ujian mahaberat."
+            },
+            {
+                level: "Sulit",
+                question: "Imam Al-Ghazali dalam kitab Ihya Ulumuddin membagi tingkatan tawakal menjadi tiga. Tingkatan tertinggi (muwahhid) adalah...",
+                options: [
+                    "Bertawakal kepada Allah sebagaimana seorang wakil mempercayai wakilnya",
+                    "Bertawakal kepada Allah sebagaimana seorang anak kecil yang selalu bersandar pada ibunya",
+                    "Berserah diri kepada Allah secara total bagaikan mayat di hadapan yang memandikannya, tanpa ada kehendak selain kehendak-Nya",
+                    "Berusaha mandiri tanpa memikirkan hasil akhir"
+                ],
+                correct: 2,
+                explanation: "Tepat! Tingkatan tertinggi tawakal adalah fana' kehendak diri di dalam kehendak Allah Swt. (ridha mutlak)."
+            },
+            {
+                level: "Sulit",
+                question: "Bagaimanakah kedudukan doa dalam mengubah qadar mu'allaq (ketentuan Allah yang bisa berubah melalui sebab tertentu)?",
+                options: [
+                    "Doa tidak memiliki pengaruh apa pun terhadap qadar",
+                    "Doa dan ikhtiar adalah sebab yang ditakdirkan oleh Allah untuk mengubah suatu keadaan atas izin-Nya",
+                    "Doa dapat mengubah qadar mubram yang sudah pasti",
+                    "Doa hanya bersifat seremonial tanpa dampak kausalitas spiritual"
+                ],
+                correct: 1,
+                explanation: "Benar! Hadis menyebutkan bahwa 'Tidak ada yang dapat menolak takdir kecuali doa, dan tidak ada yang dapat menambah umur kecuali kebaikan'."
+            },
+            {
+                level: "Sulit",
+                question: "Mengapa penggabungan antara rasa 'khauf' (takut) dan 'raja'' (harap) menjadi esensi penting dalam akhlak berdoa kepada Allah?",
+                options: [
+                    "Agar manusia merasa putus asa dan tidak bersemangat hidup",
+                    "Agar hamba tidak merasa aman dari azab-Nya sekaligus tidak berputus asa dari rahmat-Nya",
+                    "Agar doa menjadi formalitas yang kaku",
+                    "Karena rasa takut dan harap bertentangan dengan cinta kasih Allah"
+                ],
+                correct: 1,
+                explanation: "Sangat tepat! Keseimbangan antara khauf (takut) dan raja' (harap) menjaga hati hamba tetap di jalur istiqamah."
+            },
+            {
+                level: "Sulit",
+                question: "Manakah analisis filosofis yang paling tepat mengenai hakikat 'ibadah' sebagai puncak akhlak kepada Allah Swt.?",
+                options: [
+                    "Ibadah adalah transaksi jual beli keuntungan duniawi dengan Tuhan",
+                    "Ibadah adalah manifestasi kerendahan hamba yang paling dalam sebagai pengakuan atas kemutlakan keesaan dan keagungan Allah",
+                    "Ibadah adalah beban hukum yang diciptakan untuk membatasi kebebasan manusia",
+                    "Ibadah tidak berkaitan dengan pembentukan akhlak mulia"
+                ],
+                correct: 1,
+                explanation: "Benar! Hakikat ibadah dan akhlak kepada Allah adalah pengakuan eksistensial atas keagungan Sang Khaliq dan kefanaan makhluk."
+            },
+            {
+                level: "Sulit",
+                question: "Bagaimanakah implikasi tauhid rububiyah dan uluhiyah terhadap pembentukan akhlak tawakal yang murni?",
+                options: [
+                    "Tauhid membuat seseorang menggantungkan harapan kepada selain Allah",
+                    "Keyakinan bahwa hanya Allah satu-satunya Pencipta dan satu-satunya yang berhak disembah melahirkan tawakal yang bersih dari syirik",
+                    "Tauhid tidak memengaruhi kualitas tawakal seseorang",
+                    "Tauhid hanya sebatas pengetahuan teoretis di kepala tanpa amal hati"
+                ],
+                correct: 1,
+                explanation: "Luar biasa! Tauhid yang kokoh mengantarkan seseorang pada tawakal yang murni, bersih dari bergantung pada selain Allah."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let score = 0;
+        let answeredCurrent = false;
+
+        function switchTab(index) {
+            if (index < 0 || index >= totalTabs) return;
+            currentTab = index;
+
+            // Update Tabs Buttons Style
+            for (let i = 0; i < totalTabs; i++) {
+                const btn = document.getElementById(`tab-btn-${i}`);
+                const content = document.getElementById(`tab-content-${i}`);
+                
+                if (i === currentTab) {
+                    btn.className = "step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-emerald-600 text-white shadow-sm font-bold";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "step-btn py-2.5 px-1 rounded-xl transition-all duration-200 bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold";
+                    content.classList.add('hidden');
+                }
+            }
+
+            // Update Prev/Next buttons
+            document.getElementById('prev-btn').disabled = currentTab === 0;
+            const nextBtn = document.getElementById('next-btn');
+            if (currentTab === totalTabs - 1) {
+                nextBtn.textContent = "Selesai";
+            } else {
+                nextBtn.textContent = "Selanjutnya";
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navigateTab(direction) {
+            const newTab = currentTab + direction;
+            if (newTab >= 0 && newTab < totalTabs) {
+                switchTab(newTab);
+            }
+        }
+
+        // Exploration Option Selection
+        function selectExplorationOption(index) {
+            const options = document.querySelectorAll('.exp-opt');
+            const feedback = document.getElementById('exploration-feedback');
+            
+            options.forEach((opt, idx) => {
+                opt.classList.remove('bg-emerald-100', 'border-emerald-500', 'bg-red-50', 'border-red-300');
+                if (idx === index) {
+                    if (idx === 1) {
+                        opt.classList.add('bg-emerald-50', 'border-emerald-500', 'font-bold');
+                        feedback.className = "p-4 rounded-xl text-sm font-medium mt-3 bg-emerald-100 text-emerald-800 border border-emerald-200 block";
+                        feedback.innerHTML = "<strong>Luar Biasa!</strong> Pilihan B adalah cerminan akhlak yang benar. Doa memohon kemudahan dan tawakal menyerahkan hasil akhir kepada Allah adalah bentuk ketundukan yang sempurna.";
+                        confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
+                    } else {
+                        opt.classList.add('bg-red-50', 'border-red-300');
+                        feedback.className = "p-4 rounded-xl text-sm font-medium mt-3 bg-red-100 text-red-800 border border-red-200 block";
+                        feedback.innerHTML = "<strong>Kurang Tepat.</strong> Sikap tersebut belum mencerminkan keseimbangan antara ikhtiar, doa, dan tawakal yang benar kepada Allah Swt. Coba pilih opsi lainnya!";
+                    }
+                }
+            });
+        }
+
+        // Quiz Logic
+        function loadQuiz() {
+            if (currentQuizIndex >= quizData.length) {
+                document.getElementById('quiz-question-box').classList.add('hidden');
+                document.getElementById('quiz-feedback').classList.add('hidden');
+                const resultBox = document.getElementById('quiz-result-box');
+                resultBox.classList.remove('hidden');
+                document.getElementById('quiz-final-score').textContent = `Skor Akhir Anda: ${score} dari ${quizData.length * 5} poin (Maksimal 100).`;
+                if (score >= quizData.length * 4) {
+                    confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+                }
+                return;
+            }
+
+            answeredCurrent = false;
+            const q = quizData[currentQuizIndex];
+            document.getElementById('quiz-counter').textContent = `Pertanyaan ${currentQuizIndex + 1} dari ${quizData.length}`;
+            document.getElementById('quiz-score-indicator').textContent = `Skor: ${score}`;
+            
+            const badge = document.getElementById('quiz-difficulty-badge');
+            badge.textContent = q.level;
+            if (q.level === 'Mudah') {
+                badge.className = "px-2 py-0.5 rounded text-[10px] uppercase font-bold bg-emerald-100 text-emerald-800";
+            } else if (q.level === 'Sedang') {
+                badge.className = "px-2 py-0.5 rounded text-[10px] uppercase font-bold bg-amber-100 text-amber-800";
+            } else {
+                badge.className = "px-2 py-0.5 rounded text-[10px] uppercase font-bold bg-rose-100 text-rose-800";
+            }
+
+            document.getElementById('quiz-question').textContent = q.question;
+            
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+            
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 transition-all text-sm font-medium text-slate-700";
+                btn.textContent = opt;
+                btn.onclick = () => handleQuizAnswer(idx);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('quiz-feedback').classList.add('hidden');
+        }
+
+        function handleQuizAnswer(selectedIndex) {
+            if (answeredCurrent) return;
+            answeredCurrent = true;
+
+            const q = quizData[currentQuizIndex];
+            const feedback = document.getElementById('quiz-feedback');
+            const optionButtons = document.getElementById('quiz-options').children;
+
+            for (let i = 0; i < optionButtons.length; i++) {
+                optionButtons[i].disabled = true;
+                if (i === q.correct) {
+                    optionButtons[i].classList.add('bg-emerald-100', 'border-emerald-500', 'font-bold');
+                } else if (i === selectedIndex && selectedIndex !== q.correct) {
+                    optionButtons[i].classList.add('bg-red-100', 'border-red-300');
+                }
+            }
+
+            feedback.classList.remove('hidden');
+            if (selectedIndex === q.correct) {
+                score += 5; // 20 soal x 5 poin = 100 max
+                feedback.className = "p-4 rounded-xl text-sm font-medium mt-3 bg-emerald-100 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `<strong>Benar! (+5 poin)</strong> ${q.explanation}`;
+            } else {
+                feedback.className = "p-4 rounded-xl text-sm font-medium mt-3 bg-red-100 text-red-800 border border-red-200";
+                feedback.innerHTML = `<strong>Kurang tepat. (0 poin)</strong> ${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score-indicator').textContent = `Skor: ${score}`;
+
+            setTimeout(() => {
+                currentQuizIndex++;
+                loadQuiz();
+            }, 3200);
+        }
+
+        function resetQuiz() {
+            currentQuizIndex = 0;
+            score = 0;
+            document.getElementById('quiz-result-box').classList.add('hidden');
+            document.getElementById('quiz-question-box').classList.remove('hidden');
+            loadQuiz();
+        }
+
+        function saveReflection() {
+            const input = document.getElementById('reflection-input').value.trim();
+            const successBox = document.getElementById('reflection-success');
+            if (input.length > 5) {
+                successBox.classList.remove('hidden');
+                confetti({ particleCount: 70, spread: 70, origin: { y: 0.6 } });
+            } else {
+                alert("Mohon tuliskan komitmen Anda dengan lebih lengkap terlebih dahulu.");
+            }
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            showMaterialDetail('pengertian');
+            loadQuiz();
+        };
+    </script>
+</body>
+</html>
+```
